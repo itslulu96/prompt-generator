@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu's Prompt Generator</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body class="centrato">
+    <p>Click on the buttons and find out where your next writing adventure will lead you!</p>
+    <button class="personAButton" onclick="editPersonA()"><i class="material-icons">person</i></button>
+    <button class="relationshipButton" onclick="editRelationship()"><i class="material-icons">compare_arrows</i></button>
+    <button class="personBButton" onclick="editPersonB()"><i class="material-icons">person_outline</i></button>
+    <button class="placeButton" onclick="editPlace()"><i class="material-icons">location_city</i></button>
+    <button class="timeButton" onclick="editTime()"><i class="material-icons">access_time</i></button>
+    <button class="objectButton" onclick="editObject()"><i class="material-icons">library_books</i></button>
+    <button class="songButton" onclick="editSong()"><i class="material-icons">music_note</i></button> 
+	<div class="boxed">
+    <p class="outputParagraph" id="personAParagraph" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()" onclick="removeText('firstParagraph')"></p>
+    <p class="outputParagraph" id="relationshipParagraph" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()" onclick="removeText('relationshipParagraph')"></p>
+    <p class="outputParagraph" id="personBParagraph" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()" onclick="removeText('secondParagraph')"></p>
+    <p class="outputParagraph" id="placeParagraph" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()" onclick="removeText('thirdParagraph')"></p>
+    <p class="outputParagraph" id="timeParagraph" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()" onclick="removeText('fourthParagraph')"></p>
+    <p class="outputParagraph" id="objectParagraph" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()" onclick="removeText('fifthParagraph')"></p>
+    <p class="outputParagraph" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()" onclick="removeText('sixthParagraph')">
+    <a id="songParagraph" href="" target="_blank"></a></p>
+    </div>
+    <p class="deleteMessage" id="deleteText"></p>
+    <div>
+    <button class="randomizeButton" class="centrato" onclick="editPersonA();editRelationship();editPersonB();editPlace();editTime();editObject();editSong()"><i class="material-icons">shuffle</i></button>
+    </div>
+<footer class="footer">&copy;lulu</footer>
+</body>
+</html>
